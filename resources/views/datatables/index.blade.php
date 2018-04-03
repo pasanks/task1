@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <table id="users" class="table table-hover table-condensed" style="width:100%">
+        <table id="books" class="table table-hover table-condensed" style="width:100%">
             <thead>
             <tr>
                 <th>Id</th>
@@ -20,7 +20,7 @@
             oTable = $('#books').DataTable({
                 "processing": true,
                 "serverSide": true,
-                "ajax":  "{{ route('datatable.getposts') }}",
+            "ajax":  "{{ route('datatable.getposts') }}",
                 "columns": [
                     {data: 'id', name: 'id'},
                     {data: 'book_title', name: 'book_title'},
